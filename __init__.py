@@ -17,8 +17,8 @@ def which(program):
     return None
 
 def system(cmd):
-	import subprocess
-	p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	out = p.stdout.read()
-	err = p.stderr.read()
-	return (out, err)
+    import subprocess
+    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out = p.stdout.read()
+    err = p.stderr.read()
+    return (out, err)
