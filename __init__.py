@@ -22,3 +22,12 @@ def system(cmd):
     out = p.stdout.read()
     err = p.stderr.read()
     return (out, err)
+
+def round_to_n(x,n):
+    import numpy as np
+    if x == 0:
+        return 0
+    if x < 0:
+        return round(x, -int(np.floor(np.log10(abs(x)))) + (n - 1))
+    else:
+        return round(x, -int(np.floor(np.log10(abs(x)))) + (n - 1))
